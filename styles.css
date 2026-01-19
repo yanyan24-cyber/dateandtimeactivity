@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root {
+    --card-yellow: #ffcb05;
+    --card-blue: #2a75bb;
+    --card-red: #ff0000;
+    --bg-mat: #222;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-mat);
+    background-image: radial-gradient(#444 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #333;
+    margin: 0; 
+    padding: 20px;
+}
+
+header {
+    background: #1a1a1a;
+    padding: 20px 30px;
+    border-bottom: 5px solid var(--card-blue);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    color: var(--card-yellow);
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px var(--card-blue);
+    text-shadow: 3px 3px 0px #000;
+}
+
+.server-time {
+    text-align: right;
+    color: white;
+}
+
+.server-time span { 
+    display: block; 
+    font-size: 0.8rem; 
+    color: #ccc; 
+}
+
+.server-time .time-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--card-yellow);
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 10px solid var(--card-yellow);
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto 60px auto;
+}
+
+.poke-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    border: 12px solid var(--card-yellow);
+}
+
+.poke-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.card-name {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.card-hp {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--card-red);
+}
+
+.hp-label { 
+    font-size: 0.8rem; 
+    color: var(--card-red); 
+}
+
+.img-frame {
+    border: 4px solid #bbb;
+    background: #eee;
+    height: 180px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.img-frame img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.mid-bar {
+    background: linear-gradient(90deg, #e6bc2f, #d4a017);
+    color: #444;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    padding: 2px 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.move-set {
+    padding: 0 5px;
+    min-height: 80px;
+}
+
+.move-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.move-name {
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.move-damage {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.move-desc {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.3;
+}
+
+.card-footer {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.footer-item span { 
+    display: block; 
+    text-align: center;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    background: #1a1a1a;
+    border-top: 5px solid var(--card-blue);
+    text-align: center;
+}
+
+.time-zones {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    margin-bottom: 30px;
+}
+
+.tz-box {
+    background: #333;
+    padding: 10px 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    min-width: 140px;
+}
+
+.tz-label { 
+    display: block; 
+    color: var(--card-yellow); 
+    font-size: 0.8rem; 
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tz-time { 
+    font-size: 1.2rem; 
+    color: white; 
+    font-family: monospace; 
+}
+
+.creator-tag {
+    color: #777; 
+    font-size: 1rem;
+}
+
+.creator-name { 
+    color: var(--card-yellow); 
+    font-weight: bold;
+}
